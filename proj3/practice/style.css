@@ -1,0 +1,166 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+  }
+  
+  .mobile{
+    border:1px solid #eee;
+    borer-radius:2rem;
+    margin: 1rem auto;
+    max-width: 480px;
+    overflow:hidden;
+    
+  }
+  section{
+    margin:1.5rem 1.5rem;
+    margin
+  
+  }
+  
+  header{
+    background-color:blue;
+    color: white;
+    height:12rem;
+    margin-top:1rem;
+    border-radius:1rem;
+  }
+  
+  nav {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 1rem 1.5rem;
+    
+   
+  }
+  
+  nav a{
+    text-decoration:none;
+    color:white;
+  }
+  nav img{
+   width: 3rem;
+   height: 3rem;
+   border-radius:2rem;
+  }
+  .card{
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius:1rem;
+    overflow:hidden;
+    box-shadow:2px 2px 12px 0 rgba(200,200,200,.6);
+    
+  }
+  .result{
+    margin-top: -6rem;
+    padding: 1rem 1.5rem;
+  }
+  .result .subtitle{
+    margin-bottom:1rem;
+  }
+  
+  .team{
+    display:flex;
+    align-items:center;
+    
+  }
+  .team img{
+    width:3rem;
+    height:3rem;
+    border-radius:9999px;
+    margin-right:.5rem;
+    
+  }
+  .score{
+    margin-left:auto;
+    text-align:right;
+  }
+  .vs{
+    text-align:center;
+  }
+  .vs span{
+    display:inline-block;
+    background-color:#eee;
+    font-size:.6rem;
+    border-radius:.25px;
+    color:#666;
+    paadding:.25rem;
+  }
+  .result p:last-child{
+    
+    margin-top: 1rem;
+  }
+  
+  menu{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom:1rem;
+  }
+  menu button{
+    border:none;
+    background-color:white;
+    padding:1.5rem;
+    font-size:1.2rem;
+    
+  }
+  menu button.active{
+    color:blue;
+    border-bottom: 4px solid blue;
+  }
+  table{
+    text-align:right;
+    width:100%;
+    border-collapse:collapse;
+    
+  }
+  h2{
+    font-size:1.25rem;
+  }
+  thead{
+    color:black;
+    
+  }
+  tbody{
+    color:#666;
+  }
+  
+  tbody tr{
+    background-color:#f2f2f2;
+  }
+  tbody tr:nth-child(2n+1){
+    background:linear-gradient(to bottom,#f2f2f2,white,70%,white);
+  }
+  
+  thead th , tbody td{
+   text-align:left;
+    padding-right:1.5rem;
+  }
+  tbody td{
+    color:blue;
+  }
+  th,td{
+    padding:1rem .25rem;
+  }
+  .pom{
+    overflow:hidden;
+    margin:1rem 1.5 rem;
+    width:auto;
+    padding:1rem 1.5remm;
+    position:relative; 
+    height:10rem;
+  }
+  .pom img{
+    bottom:0;
+    height:11rem;
+    right:0rem;
+    position:absolute;
+    height:10rem
+   
+  }
+  .pom h2{
+    margin-bottom:1rem;
+  }
+  .pom name ~p{
+    font-size:1.25rem;
+  }

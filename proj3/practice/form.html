@@ -1,0 +1,57 @@
+<?php 
+
+// defining an array
+$error=array();
+if(isset($_GET['submit'])){
+
+    // declaration of the variabes
+    $name=$_POST['name'];
+    $no=$_POST['mobile'];
+    $email=$_POST['email'];
+
+
+
+    // checking the fields are empty or not
+    if(empty($name)){
+        array_push($error,'name');
+    }
+    if(empty($no)){
+        array_push($error,'no');
+    }
+    if(empty($email)){
+        array_push($error,'email');
+    }
+
+    // checking the values in the array
+    print_r($error);
+
+    if(count($error)==0){
+        // printing thr form elemnts
+    echo $name."<br>";
+    echo $no ."<br>";
+    echo $email ."<br>";
+    }
+}
+
+
+
+<html>
+?>
+    <title>Basic fom demo using php</title>
+<body>
+    <form action="form_data.php" method="POST">
+        <label>Name of the student </label>
+        <input type="text" id="name" name ="name" placeholder="Please enter your name"><br><br>
+        <label> Mobile number</label>
+        <input  type="number" id="mobile" name="mobile" placeholder="Enter Your Number"><br><br>
+        <label>Email address</label>
+        <input type="text" name="email" id="email" placeholder="Enter the email"><br><br>
+        <input type="submit" name ="submit" value="submit">
+
+    </form>
+</body>
+</html>
+<?php 
+
+
+?>
