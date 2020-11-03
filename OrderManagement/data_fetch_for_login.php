@@ -47,9 +47,9 @@ if(isset($_POST['submit'])){
             }
             else{
             
-                echo "wrong credentials"
-
                 
+                header("location:login.php");
+    
 
 
                 // html form 
