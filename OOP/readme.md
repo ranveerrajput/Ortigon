@@ -11,3 +11,4 @@ OOP helps to keep the PHP code DRY "Don't Repeat Yourself", and makes the code e
 OOP makes it possible to create full reusable applications with less code and shorter development time
 <hr>
 <h1>PHP - What are Classes and Objects?</h1>
+A class is a template for objects, and an object is an instance of class.
