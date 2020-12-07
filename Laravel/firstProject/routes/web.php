@@ -22,3 +22,7 @@ Route::get('/', function () {
 Route::get('login', [App\Http\Controllers\UserController::class,'loginForm']); 
 
 Route::post('login',[App\Http\Controllers\UserController::class,'checkLogin']);
+
+Route::get('order/create',[App\Http\Controllers\OrderController::class,'insert']);
+
+ 
