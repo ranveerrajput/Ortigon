@@ -19,17 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('login',function(){
-    return view('auth/login');
-}); 
+Route::get('login', [App\Http\Controllers\UserController::class,'loginForm']); 
 
-Route::post('login',function(Request $request){
-    //echo $request->email . "<br>" . $request->password;
-  
-    $email = $request->email;
-    $password = $request->password;
-    
-
-    return view('user',compact('email', 'password'));
-   
-});
+Route::post('login',[App\Http\Controllers\UserController::class,'checkLogin']);
