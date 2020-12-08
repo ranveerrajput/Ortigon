@@ -25,4 +25,4 @@ Route::post('login',[App\Http\Controllers\UserController::class,'checkLogin']);
 
 Route::get('order/create',[App\Http\Controllers\OrderController::class,'insert']);
 
- 
+ Route::get('orders',[App\Http\Controllers\OrderController::class,'fetch']);
