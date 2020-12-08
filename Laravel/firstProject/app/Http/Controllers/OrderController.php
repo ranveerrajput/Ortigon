@@ -19,9 +19,9 @@ class OrderController extends Controller
     }   
 
     // creating a method to fetch all the records
-    public function fetch()
+    public function fetch() 
     {
        $orders= Order::all();
-       return $orders;
+       return view('orders',compact('orders'));
     }
 }
