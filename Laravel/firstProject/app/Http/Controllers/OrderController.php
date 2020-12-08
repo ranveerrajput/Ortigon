@@ -17,4 +17,11 @@ class OrderController extends Controller
         $order->save();
         return $order;
     }   
+
+    // creating a method to fetch all the records
+    public function fetch()
+    {
+       $orders= Order::all();
+       return $orders;
+    }
 }
