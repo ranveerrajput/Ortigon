@@ -19,10 +19,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('login', [App\Http\Controllers\UserController::class,'loginForm']); 
+// Route::get('login', [App\Http\Controllers\UserController::class,'loginForm']); 
 
-Route::post('login',[App\Http\Controllers\UserController::class,'checkLogin']);
+// Route::post('login',[App\Http\Controllers\UserController::class,'checkLogin']);
 
-Route::get('order/create',[App\Http\Controllers\OrderController::class,'insert']);
+// Route::get('order/create',[App\Http\Controllers\OrderController::class,'insert']);
 
- Route::get('orders',[App\Http\Controllers\OrderController::class,'fetch']);
+//  Route::get('orders',[App\Http\Controllers\OrderController::class,'fetch']);
+
+Route::get('post/form',[App\Http\Controllers\PostController::class,'show']);
+
+Route::post('post/store',[App\Http\Controllers\PostController::class,'store']);
+
+Route::get('post/all',[App\Http\Controllers\PostController::class,'get']);
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/users',[App\Http\Controllers\UserController::class,'getall']);
