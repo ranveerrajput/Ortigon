@@ -19,4 +19,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::middleware('auth')->group(function(){
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/post/create',[App\Http\Controllers\PostController::class,'index'])->name('post.create')->middleware('auth');
+
+Route::post('/post/store',[App\Http\Controllers\PostController::class,'store'])->name('post.store');
+
+Route::get('/post/myposts',[App\Http\Controllers\PostController::class,'myposts'])->name('post.myposts');
+});
+
