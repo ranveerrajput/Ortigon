@@ -21,12 +21,20 @@ Auth::routes();
 
 Route::middleware('auth')->group(function(){
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\PostController::class, 'allpost'])->name('home');
 
 Route::get('/post/create',[App\Http\Controllers\PostController::class,'index'])->name('post.create')->middleware('auth');
 
 Route::post('/post/store',[App\Http\Controllers\PostController::class,'store'])->name('post.store');
 
 Route::get('/post/myposts',[App\Http\Controllers\PostController::class,'myposts'])->name('post.myposts');
+
+Route::get('/post/delete/{post_id}',[App\Http\Controllers\PostController::class,'delete'])->name('post.delete');
+
+Route::get('/post/edit/{post_id}',[App\Http\Controllers\PostController::class,'edit'])->name('post.edit');
+
+Route::post('/post/update/{post_id}',[App\Http\Controllers\PostController::class,'update'])->name('post.update');
+
+
 });
 

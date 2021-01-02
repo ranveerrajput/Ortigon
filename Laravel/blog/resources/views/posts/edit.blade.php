@@ -15,21 +15,20 @@
       </head>
       <body>
 
-        <form action="{{ route('post.store')}}" method="post">
+        <form action="{{ route('post.update',[$post->id])}}" method="post">
        @csrf
-        <div class="container  rounded pb-3" style="background-color: #ccebff;">
-
+       <div class="container  rounded pb-3" style="background-color: #ccebff;">
             <div class="form-group">
               <label for="" class="display-3">Title</label>
-              <input type="text" name="Title" id="Title" class="form-control" placeholder="Title" aria-describedby="helpId">
+              <input type="text" name="Title" id="Title" value="{{$post->title}}" class="form-control" placeholder="Title" aria-describedby="helpId">
             </div>
              
             <div class="form-group">
               <label for="" class="display-3">Description</label>
-              <textarea type="text" name="Description" id="Description" class="form-control" placeholder="Description" aria-describedby="helpId"></textarea>
+              <textarea type="text" name="Description" id="Description" class="form-control" placeholder="Description" aria-describedby="helpId">{{$post->desc}}</textarea>
               
             </div>
-            <button type="submit" class="btn btn-primary">Create Post</button>
+            <button type="submit" class="btn btn-primary">Update</button>
         
         
         
