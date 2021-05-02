@@ -9,7 +9,8 @@
 
             <div class="card mt-3">
                 <div class="card-body">
-                    <h1 class="shadow-lg p-3 mb-5 bg-primary rounded  ">{{$post->title}}</h1>
+                <a href="{{ route('post.single',[$post->id])}}" style="color:green"><h1 class="shadow-lg p-3 mb-5 bg-primary rounded  ">{{$post->title}}</h1></a>
+                    
                     <p class="shadow-sm p-3 mb-5 card-text bg-warning rounded">{{$post->desc}}</p>
                     <a href="{{route('post.edit',[$post->id])}}"><button type="button" class="btn btn-info">Edit</button></a>
                     <a href="{{route('post.delete',[$post->id])}}"><button type="button" class="btn btn-danger">Delete</button></a>

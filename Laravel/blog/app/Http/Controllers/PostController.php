@@ -86,6 +86,14 @@ class PostController extends Controller
          return redirect('/post/myposts');
          
       }
+
+      public function get($id)
+      {
+         # code...
+         $post = Post::findOrFail($id);
+         $post->comments;
+         return view('posts.post',compact('post'));
+      }
      
 
 }

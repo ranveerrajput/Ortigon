@@ -35,6 +35,9 @@ Route::get('/post/edit/{post_id}',[App\Http\Controllers\PostController::class,'e
 
 Route::post('/post/update/{post_id}',[App\Http\Controllers\PostController::class,'update'])->name('post.update');
 
+Route::get('/post/{id}',[App\Http\Controllers\PostController::class,'get'])->name('post.single');
+
+Route::post('/comment/{id}',[App\Http\Controllers\CommmentController::class,'store'])->name('comment.store');
 
 });
 
